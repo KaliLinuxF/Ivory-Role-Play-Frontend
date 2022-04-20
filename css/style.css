@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Montserrat:wght@300;400;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*-----------------------------------*/
+html {
+  background: url(../images/bg.png) no-repeat center center fixed;
+  background-size: cover;
+}
+
+body {
+  color: #FFFFFF;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+  background: rgba(12, 20, 47, 0.85) no-repeat center center fixed;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+._container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.header__logo {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin: 30px 0 0 0;
+  font-family: 'Dancing Script', cursive;
+  font-size: 40px;
+}
+
+.header__logo span {
+  color: #d6d600;
+}
+
+.loginForm {
+  margin-top: 120px;
+  text-align: center;
+  width: 100%;
+}
+
+.loginForm__title {
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.loginForm__subtitle {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.input {
+  max-width: 100%;
+}
+
+.input__wrap {
+  position: relative;
+}
+
+.input__login {
+  width: 60%;
+  color: #FFFFFF;
+  padding: 15px 10px;
+  margin-bottom: 15px;
+  background-color: #202743;
+  border-radius: 7px;
+}
+
+.input__login::-webkit-input-placeholder {
+  color: #495172;
+}
+
+.input__login:-ms-input-placeholder {
+  color: #495172;
+}
+
+.input__login::-ms-input-placeholder {
+  color: #495172;
+}
+
+.input__login::placeholder {
+  color: #495172;
+}
+
+.input__email {
+  width: 60%;
+  color: #FFFFFF;
+  padding: 15px 10px;
+  margin-bottom: 15px;
+  background-color: #202743;
+  border-radius: 7px;
+}
+
+.input__email::-webkit-input-placeholder {
+  color: #495172;
+}
+
+.input__email:-ms-input-placeholder {
+  color: #495172;
+}
+
+.input__email::-ms-input-placeholder {
+  color: #495172;
+}
+
+.input__email::placeholder {
+  color: #495172;
+}
+
+.input__error {
+  position: absolute;
+  display: inline-block;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff7b7b), to(#FC4E4E));
+  background: linear-gradient(180deg, #ff7b7b 0%, #FC4E4E 100%);
+  -webkit-box-shadow: inset 0px 0px 24px #FC4E4E;
+          box-shadow: inset 0px 0px 24px #FC4E4E;
+  border-radius: 8px;
+  margin: 0 0 0 20px;
+  width: 200px;
+  height: 46px;
+  padding: 10px 15px;
+  text-align: left;
+}
+
+.input #wrongLogin {
+  visibility: hidden;
+}
+
+.input #wrongPassword {
+  visibility: hidden;
+}
+
+.input #takenLogin {
+  visibility: hidden;
+}
+
+.input #takenEmail {
+  visibility: hidden;
+}
+
+.input__password {
+  width: 60%;
+  color: #FFFFFF;
+  padding: 15px 10px;
+  margin-bottom: 15px;
+  background-color: #202743;
+  border-radius: 7px;
+}
+
+.input__password::-webkit-input-placeholder {
+  color: #495172;
+}
+
+.input__password:-ms-input-placeholder {
+  color: #495172;
+}
+
+.input__password::-ms-input-placeholder {
+  color: #495172;
+}
+
+.input__password::placeholder {
+  color: #495172;
+}
+
+.input__password_forget {
+  display: inline-block;
+  width: 275px;
+  text-align: right;
+  margin-bottom: 15px;
+}
+
+.input__button {
+  display: block;
+  font-weight: 600;
+  margin: 0 auto;
+  width: 60%;
+  padding: 18px 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#EFC403), to(#FFDC41));
+  background: linear-gradient(180deg, #EFC403 0%, #FFDC41 100%);
+  -webkit-box-shadow: inset 0px 0px 24px #FFE677;
+          box-shadow: inset 0px 0px 24px #FFE677;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  -webkit-transition: all ease-in-out 0.1s;
+  transition: all ease-in-out 0.1s;
+}
+
+.input__button:hover {
+  opacity: 0.8;
+}
+
+.input__button:active {
+  opacity: 0.8;
+  -webkit-box-shadow: inset 0px 0px 10px #a7974d;
+          box-shadow: inset 0px 0px 10px #a7974d;
+}
+
+a {
+  color: #757EA5;
+  text-decoration: underline;
+  -webkit-transition: all ease-in-out 0.1s;
+  transition: all ease-in-out 0.1s;
+}
+
+a:hover {
+  color: #5b617f;
+}

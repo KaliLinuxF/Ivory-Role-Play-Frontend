@@ -4,31 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="wrapper">
-        <div class="loginForm">
-            <div class="title">
-                Ivory Role Play
-            </div>
-            <form id="formLogin">
-                <ul>
-                 <li class="formList">
-                   <label class="formLabel">Login:</label>
-                   <input type="text" name="login">
-                 </li>
-                 <li class="formList">
-                   <label>Password:</label>
-                   <input type="password" name="password">
-                 </li>
-                </ul>
-               </form>
-               <button type="button" form="formLogin" onclick="auth()">Login</button>
+        <header class="header _container">
+            <div class="header__logo">Ivory <span>Role Play</span></div>
+        </header>
+        <div class="loginForm _container">
+            <div class="loginForm__title">Авторизация</div>
+            <div class="loginForm__subtitle">Для входа на сервер введите данные ниже</div>
+            <form id="formLogin" class="input">
+                <input type="text" class="input__login" placeholder="Введите логин" name="login">
+                <div class="input__error" id="wrongLogin">Введен <br>неверный логин</div>
+                <input type="password" class="input__password" placeholder="Введите пароль" name="password">
+                <div class="input__error" id="wrongPassword">Введен <br>неверный пароль</div>
+                <div class="input__password_forget"><a href="#">Забыли пароль?</a></div>
+                <button type="button" form="formLogin" onclick="auth()" class="input__button">Авторизоваться</button>
+            </form>
+            <div class="registration"><a href="registration.html">Нет аккаунта? Зарегистрируйтесь!</a></div>
         </div>
     </div>
 
-
-    <script src="app.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

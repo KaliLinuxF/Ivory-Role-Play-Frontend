@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" style="background-image: url(/images/bg-reg.png);">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header _container">
+            <div class="header__logo">Ivory <span>Role Play</span></div>
+        </header>
+        <div class="loginForm _container">
+            <div class="loginForm__title">Регистрация</div>
+            <div class="loginForm__subtitle">Для игры на сервере необходимо зарегистрироваться</div>
+            <form id="formReg" class="input">
+                <input type="text" class="input__login" placeholder="Введите логин" name="login" required>
+                <div class="input__error" id="takenLogin">Логин <br>уже используется</div>               
+                <input type="email" class="input__email" placeholder="Введите email-адрес" name="email" required>
+                <div class="input__error" id="takenEmail">Почта <br>уже используется</div>
+                <input type="password" class="input__password" placeholder="Введите пароль" name="password" required>
+                <button type="button" form="formReg" onclick="reg()" class="input__button">Зарегистрироваться</button>
+            </form>
+            <div class="back"><a href="../index.html">Вернуться назад</a></div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
