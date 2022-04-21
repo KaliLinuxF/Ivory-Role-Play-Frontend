@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header _container">
+            <div class="header__logo">Ivory <span>Role Play</span></div>
+        </header>
+        <div class="loginForm _container">
+            <div class="loginForm__title">Восстановление доступа</div>
+            <div class="loginForm__subtitle">Для восстановления аккаунта введите данные ниже</div>
+            <form id="passRecovery" class="input">
+                <input type="email" class="input__email" placeholder="Введите email-адрес" name="email" required>
+                <div class="mb-6 text-center">
+                    <div id="otp" class="flex justify-center">
+                        <input class="m-2 text-center form-control form-control-solid rounded" type="text" id="OTP1" maxlength="1" />
+                        <input class="m-2 text-center form-control form-control-solid rounded" type="text" id="OTP2" maxlength="1" />
+                        <input class="m-2 text-center form-control form-control-solid rounded" type="text" id="OTP3" maxlength="1" />
+                        <input class="m-2 text-center form-control form-control-solid rounded" type="text" id="OTP4" maxlength="1" />
+                        <input class="m-2 text-center form-control form-control-solid rounded" type="text" id="OTP5" maxlength="1" />
+                        <input class="m-2 text-center form-control form-control-solid rounded" type="text" id="OTP6" maxlength="1" />
+                    </div>
+                  </div>
+                <button type="button" form="passRecovery" onclick="recovery()" class="input__button">Подтвердить</button>
+            </form>
+            <div class="back"><a href="../index.html">Вернуться назад</a></div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

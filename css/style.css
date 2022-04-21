@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Montserrat:wght@300;400;600&display=swap");
+@import url("https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css");
 * {
   padding: 0;
   margin: 0;
@@ -81,6 +82,7 @@ body {
   color: #FFFFFF;
   height: 100%;
   font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
 }
 
 .wrapper {
@@ -98,7 +100,6 @@ body {
 }
 
 ._container {
-  max-width: 500px;
   margin: 0 auto;
 }
 
@@ -107,34 +108,38 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  margin: 30px 0 0 0;
+  margin: 50px 0 0 0;
   font-family: 'Dancing Script', cursive;
-  font-size: 40px;
+  font-size: 50px;
 }
 
 .header__logo span {
   color: #d6d600;
 }
 
+/*------------------------------------------*/
 .loginForm {
-  margin-top: 120px;
+  margin-top: 200px;
   text-align: center;
   width: 100%;
 }
 
 .loginForm__title {
-  font-size: 35px;
+  font-size: 45px;
   font-weight: 600;
   margin-bottom: 20px;
 }
 
 .loginForm__subtitle {
-  font-size: 16px;
+  font-size: 20px;
   margin-bottom: 30px;
 }
 
 .input {
-  max-width: 100%;
+  max-width: 600px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .input__wrap {
@@ -142,9 +147,11 @@ body {
 }
 
 .input__login {
+  background: url(/images/login.png) no-repeat right;
+  background-position-x: 10px;
   width: 60%;
   color: #FFFFFF;
-  padding: 15px 10px;
+  padding: 15px 10px 15px 40px;
   margin-bottom: 15px;
   background-color: #202743;
   border-radius: 7px;
@@ -167,9 +174,11 @@ body {
 }
 
 .input__email {
+  background: url(/images/email.png) no-repeat right;
+  background-position-x: 10px;
   width: 60%;
   color: #FFFFFF;
-  padding: 15px 10px;
+  padding: 15px 10px 15px 40px;
   margin-bottom: 15px;
   background-color: #202743;
   border-radius: 7px;
@@ -202,30 +211,16 @@ body {
   margin: 0 0 0 20px;
   width: 200px;
   height: 46px;
-  padding: 10px 15px;
+  padding: 8px 15px;
   text-align: left;
 }
 
-.input #wrongLogin {
-  visibility: hidden;
-}
-
-.input #wrongPassword {
-  visibility: hidden;
-}
-
-.input #takenLogin {
-  visibility: hidden;
-}
-
-.input #takenEmail {
-  visibility: hidden;
-}
-
 .input__password {
+  background: url(/images/password.png) no-repeat right;
+  background-position-x: 10px;
   width: 60%;
   color: #FFFFFF;
-  padding: 15px 10px;
+  padding: 15px 10px 15px 40px;
   margin-bottom: 15px;
   background-color: #202743;
   border-radius: 7px;
@@ -254,7 +249,24 @@ body {
   margin-bottom: 15px;
 }
 
+.input #wrongLogin {
+  visibility: hidden;
+}
+
+.input #wrongPassword {
+  visibility: hidden;
+}
+
+.input #takenLogin {
+  visibility: hidden;
+}
+
+.input #takenEmail {
+  visibility: hidden;
+}
+
 .input__button {
+  color: #292929;
   display: block;
   font-weight: 600;
   margin: 0 auto;
@@ -290,3 +302,45 @@ a {
 a:hover {
   color: #5b617f;
 }
+
+/*----------------------------------------------*/
+.form-control {
+  -webkit-transition: none;
+  transition: none;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+}
+
+.form-control:focus {
+  color: #3F4254;
+  background-color: #495172;
+  border-color: #884377;
+  outline: 0;
+}
+
+.form-control.form-control-solid {
+  background-color: #202743;
+  border: 1px solid;
+  border-color: #495172;
+  color: #FFFFFF;
+  -webkit-transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, -webkit-box-shadow 0.15s ease;
+}
+
+.form-control.form-control-solid:active,
+.form-control.form-control-solid.active,
+.form-control.form-control-solid:focus,
+.form-control.form-control-solid.focus {
+  background-color: #495172;
+  border: 0px;
+  border-color: #495172;
+  -webkit-transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, -webkit-box-shadow 0.15s ease;
+}
+
+/*-----------------------------*/
