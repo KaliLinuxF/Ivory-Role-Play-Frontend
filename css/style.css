@@ -79,7 +79,7 @@ html {
 }
 
 body {
-  color: #FFFFFF;
+  color: #D5DCF9;
   height: 100%;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
@@ -305,10 +305,11 @@ a:hover {
 
 /*----------------------------------------------*/
 .form-control {
+  font-size: 18px;
   -webkit-transition: none;
   transition: none;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   text-align: center;
 }
 
@@ -341,6 +342,21 @@ a:hover {
   transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
   transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
   transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, -webkit-box-shadow 0.15s ease;
+}
+
+.sendCode {
+  display: inline;
+  margin: 0 0 0 10px;
+}
+
+.sendCode a {
+  color: #D5DCF9;
+  -webkit-transition: all ease-in-out 0.1s;
+  transition: all ease-in-out 0.1s;
+}
+
+.sendCode a:hover {
+  color: #afb5cc;
 }
 
 /*-----------------------------*/
