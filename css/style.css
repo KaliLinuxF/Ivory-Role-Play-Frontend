@@ -345,8 +345,11 @@ a:hover {
 }
 
 .sendCode {
-  display: inline;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
   margin: 0 0 0 10px;
+  color: #afb5cc;
 }
 
 .sendCode a {
@@ -359,4 +362,30 @@ a:hover {
   color: #afb5cc;
 }
 
+.sendCode_clicked {
+  pointer-events: none;
+}
+
+.sendCode_clicked a {
+  color: #8b8e9a;
+}
+
 /*-----------------------------*/
+/* NOTIFICATIONS SECTION */
+.notifications {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  background-color: #202743;
+  padding: 20px 60px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  text-align: center;
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+}

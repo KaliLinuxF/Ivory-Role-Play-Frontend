@@ -69,8 +69,46 @@ function OTPInput() {
   }
 OTPInput();
 
+
+
+function sendCode() {
+  let codeSent = document.getElementById("sendCode");
+  codeSent.classList.add("sendCode_clicked");
+  let timerSec = 5;
+  const recoveryTimer = setInterval(function() {
+    document.getElementById("sendCode").innerHTML='<a href="#" onclick="sendCode()">Выслать код <br> повторно</a>' + ' (' + timerSec + 's)';
+    timerSec--;
+    if (timerSec == -1) {
+      clearInterval(recoveryTimer);
+      codeSent.classList.remove("sendCode_clicked");
+      document.getElementById("sendCode").innerHTML='<a href="#" onclick="sendCode()">Выслать код <br> повторно</a>'
+    }
+  }, 1000);
+
+  document.getElementById("notifCode").classList.remove("hidden");
+  setTimeout(function() {document.getElementById("notifCode").classList.add("hidden");}, 5000);
+}
+
+
+
 /* 
 onclick = recovery()
 OTP input id's = OTP1, OTP2, OTP3, OTP4, OTP5, OTP6
 form id = "passRecovery"
 */
+
+function recovery() {
+/*   document.getElementById("notifPass").classList.remove("hidden");
+  setTimeout(function() {document.getElementById("notifPass").classList.add("hidden");}, 5000); */
+  const recoveryForm = document.getElementById('passRecovery');
+  console.log(recoveryForm.elements)
+  mp.trigger('client.getCode',  JSON.stringify(
+    {
+        code: recoveryForm.elements.OTP1.value,
+}));
+  
+}
+
+
+/*--------END OF PASSWORD RECOVERY SECTION--------*/
+

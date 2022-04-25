@@ -16,7 +16,7 @@
             <div class="loginForm__subtitle">Для восстановления аккаунта введите данные ниже</div>
             <form id="passRecovery" class="input">
                 <input type="email" class="input__email" placeholder="Введите email-адрес" name="email" required>
-                <div class="sendCode"><a href="#">Выслать код</a></div>
+                <div class="sendCode" id="sendCode"><a href="#" onclick="sendCode()">Выслать код</a></div>
                 <div class="mb-6 text-center">
                     <div id="otp" class="flex justify-center">
                         <input class="m-2 text-center form-control form-control-solid rounded" type="text" id="OTP1" maxlength="1" />
@@ -31,6 +31,8 @@
             </form>
             <div class="back"><a href="../index.html">Вернуться назад</a></div>
         </div>
+        <div class="notifications hidden" id="notifCode">На вашу почту отправлен <br> проверочный код</div>
+        <div class="notifications hidden" id="notifPass">На вашу почту отправлен <br> новый пароль</div>
     </div>
 
     <script src="js/app.js"></script>
